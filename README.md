@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Sumayea.dev — Smart Developer Portfolio & Blog
 
-## Getting Started
+> My personal developer portfolio and blog platform built with modern web technologies.  
+> Live at: [sumayea-dev.vercel.app](https://sumayea-dev.vercel.app)
 
-First, run the development server:
+[![Built with Next.js](https://img.shields.io/badge/Built%20with-Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 About This Project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Sumayea.dev** is my personal developer portfolio and blog platform. It's designed to showcase my projects, share technical knowledge through blogs, and provide an admin panel for content management.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project demonstrates my ability to build a full-stack application with modern web technologies, including authentication, database management, and a CMS-like experience.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- ✅ **Dynamic Project Showcase** — Add, edit, and delete projects via admin panel
+- ✅ **MDX Blog Engine** — Write blog posts with MDX support for interactive content
+- ✅ **Admin Dashboard** — Headless CMS for managing content without touching code
+- ✅ **Authentication** — Secure login/register with NextAuth.js (Email + Google)
+- ✅ **View Counter** — Track project and blog post views with database transactions
+- ✅ **Search & Pagination** — Filter projects/posts by tags and keywords
+- ✅ **Dark/Light Mode** — Seamless theme switching with Tailwind CSS
+- ✅ **Contact Form** — Send emails directly via Resend API
+- ✅ **Responsive Design** — Fully optimized for desktop, tablet, and mobile
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠️ Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| **Category** | **Technologies** |
+|--------------|------------------|
+| **Framework** | Next.js 15 (App Router), React 19 |
+| **Language** | TypeScript |
+| **Styling** | Tailwind CSS, shadcn/ui |
+| **Database** | PostgreSQL (Neon.tech) |
+| **ORM** | Prisma |
+| **Authentication** | NextAuth.js |
+| **Email** | Resend |
+| **Deployment** | Vercel |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📂 Project Structure
+
+sumayea-dev/
+├── app/
+│   ├── (public)/          # Public routes (home, projects, blog, about)
+│   ├── (admin)/           # Admin routes (dashboard, manage content)
+│   ├── api/               # API routes (auth, projects, posts, contact)
+│   └── layout.tsx         # Root layout
+├── components/            # Reusable UI components
+├── lib/                   # Utilities (prisma, auth, helpers)
+├── prisma/                # Prisma schema and migrations
+├── public/                # Static assets
+├── styles/                # Global styles
+├── types/                 # TypeScript type definitions
+├── .env                   # Environment variables
+├── next.config.ts         # Next.js configuration
+├── package.json           # Dependencies and scripts
+├── README.md              # Project documentation
+└── LICENSE                # MIT License
+
+
+---
+
+## 🚦 Getting Started
+
+### Prerequisites
+
+- Node.js 18.x or later
+- PostgreSQL database (local or cloud like Neon.tech)
+- Git
+
+
+---
+## 🤝 Connect
+
+- **LinkedIn:** [Sumayea Rahman](https://linkedin.com/in/sumayea-rahman)
+- **GitHub:** [Sumayea104](https://github.com/Sumayea104)
+- **Gmail:** sumayearahman7@gmail.com
+- **LeetCode:** [ShorboNam](https://leetcode.com/u/ShorboNam/)
+- **Portfolio:** [Coming Soon]
+- **Technical Notes:** [Coming Soon]
+
+---
