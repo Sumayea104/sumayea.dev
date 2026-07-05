@@ -1,10 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
 import { useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
 import { Calendar, Clock, ExternalLink, ArrowLeft } from "lucide-react"
 
+// Fetch posts from dev.to API
 async function getDevToPosts() {
   try {
     const res = await fetch(
@@ -24,6 +27,7 @@ async function getDevToPosts() {
 }
 
 export default function BlogPage() {
+  const router = useRouter()
   const [posts, setPosts] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -37,24 +41,25 @@ export default function BlogPage() {
   return (
     <main className="min-h-screen pt-24 pb-16 bg-gradient-to-br from-gray-50/50 via-white to-purple-50/30 dark:from-gray-950/50 dark:via-gray-950 dark:to-purple-950/20">
       <div className="container mx-auto px-4 max-w-4xl">
-        {/* ✅ Back to Home Button - Fixed with high z-index */}
-        <div className="relative z-[999] mb-8">
-          <Link
-            href="/"
-            prefetch
-            className="inline-flex items-center gap-2 rounded-lg border border-purple-200 dark:border-purple-800 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm px-4 py-2 text-sm font-medium text-muted-foreground transition-all duration-200 hover:text-purple-600 hover:border-purple-500 hover:shadow-lg dark:hover:text-purple-400"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back to Home
-          </Link>
-        </div>
+        {/* ✅ Fixed Back to Home Button */}
+        <div className="relative z-20 mb-6">
+  <Link
+    href="/"
+    className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-200 group cursor-pointer"
+  >
+    <ArrowLeft
+      size={16}
+      className="group-hover:-translate-x-1 transition-transform duration-200"
+    />
+    Back to Home
+  </Link>
+</div>
 
         {/* Header */}
         <div className="mb-12">
           <div className="relative">
-            {/* ✅ Decorative Blobs with pointer-events-none */}
-            <div className="pointer-events-none absolute -top-20 -right-20 w-72 h-72 rounded-full bg-purple-500/10 dark:bg-purple-500/5 blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-pink-500/10 dark:bg-pink-500/5 blur-3xl" />
+            <div className="absolute -top-20 -right-20 w-72 h-72 bg-purple-500/10 dark:bg-purple-500/5 rounded-full blur-3xl" />
+            <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-pink-500/10 dark:bg-pink-500/5 rounded-full blur-3xl" />
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 via-purple-500 to-pink-600 bg-clip-text text-transparent relative">
               📝 Blog
@@ -83,6 +88,7 @@ export default function BlogPage() {
         {/* Blog Posts Grid */}
         {!loading && posts.length > 0 && (
           <div className="space-y-8">
+          
             {posts.map((post: any) => (
               <article
                 key={post.id}

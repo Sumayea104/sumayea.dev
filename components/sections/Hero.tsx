@@ -1,122 +1,63 @@
-import { db } from "@/db"
-import { portfolioSettings } from "@/db/schema"
 import Image from "next/image"
-import { Download, Sparkles, Github, Linkedin, Twitter, Mail } from "lucide-react"
 
-export async function Hero() {
-  const settings = await db.select().from(portfolioSettings)
-  const data = settings[0]
-
-  const profileImage = "https://github.com/Sumayea104.png"
-
+export function Hero() {
   return (
-    <section className="min-h-screen flex items-center pt-16 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl" />
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="min-h-screen flex items-center pt-16">
+      <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Text Content */}
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-full text-purple-600 dark:text-purple-400 text-sm font-medium mb-6">
-              <Sparkles size={16} />
-              Available for Opportunities
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600/10 rounded-full text-purple-600 text-sm font-medium mb-6">
+              ✨ Available for Opportunities
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
-              Hi, I'm{" "}
-              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                {data?.heroTitle || "Sumayea Rahman"}
-              </span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Hi, I&apos;m <span className="text-purple-600">Sumayea Rahman</span>
             </h1>
 
-            <h2 className="text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-6">
-              {data?.heroSubtitle || "Full Stack Developer | MBA (Finance) | AI Enthusiast"}
+            <h2 className="text-2xl md:text-3xl text-gray-600 mb-6">
+              Full Stack Developer | MBA (Finance) | AI Enthusiast
             </h2>
 
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-xl">
+            <p className="text-lg text-gray-600 mb-8 max-w-xl">
               Building business-driven web applications with financial thinking,
               AI integration, and modern technology.
             </p>
 
-            {/* Buttons */}
             <div className="flex flex-wrap gap-4 mb-8">
               <a
                 href="/resume.pdf"
                 target="_blank"
                 className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:scale-105 transition shadow-lg shadow-purple-500/30 flex items-center gap-2"
               >
-                <Download size={18} />
-                Download Resume
+                ⬇️ Download Resume
               </a>
               <a
                 href="#projects"
-                className="px-6 py-3 border-2 border-purple-600 text-purple-600 dark:text-purple-400 rounded-lg hover:bg-purple-600/10 transition"
+                className="px-6 py-3 border-2 border-purple-600 text-purple-600 rounded-lg hover:bg-purple-600/10 transition"
               >
                 View Projects
               </a>
             </div>
 
-            {/* Social Links */}
             <div className="flex gap-4">
-              <a
-                href={data?.github || "https://github.com/Sumayea104"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110"
-                aria-label="GitHub"
-              >
-                <Github size={20} />
-              </a>
-              <a
-                href={data?.linkedin || "https://www.linkedin.com/in/sumayea-rahman"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a
-                href={data?.twitter || "https://x.com/RahmanSuma22098"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </a>
-              <a
-                href={`mailto:${data?.email || "sumayearahman7@gmail.com"}`}
-                className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110"
-                aria-label="Email"
-              >
-                <Mail size={20} />
-              </a>
+              <a href="https://github.com/Sumayea104" target="_blank" className="p-3 bg-gray-100 rounded-full hover:bg-purple-100 transition">🐙</a>
+              <a href="https://www.linkedin.com/in/sumayea-rahman" target="_blank" className="p-3 bg-gray-100 rounded-full hover:bg-purple-100 transition">🔗</a>
+              <a href="https://x.com/RahmanSuma22098" target="_blank" className="p-3 bg-gray-100 rounded-full hover:bg-purple-100 transition">🐦</a>
+              <a href="mailto:sumayearahman7@gmail.com" className="p-3 bg-gray-100 rounded-full hover:bg-purple-100 transition">✉️</a>
             </div>
           </div>
 
-          {/* Right Side - Profile Image */}
           <div className="flex justify-center">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-full blur-2xl animate-pulse" />
-              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-                <Image
-                  src={profileImage}
-                  alt="Sumayea Rahman"
-                  width={400}
-                  height={400}
-                  className="rounded-full object-cover border-4 border-purple-500/30 shadow-2xl"
-                  priority
-                />
-                <div className="absolute -bottom-2 -right-2 bg-green-500 rounded-full p-2 border-4 border-white dark:border-gray-900">
-                  <div className="w-2 h-2 bg-white rounded-full" />
-                </div>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-full blur-2xl" />
+              <Image
+                src="https://github.com/Sumayea104.png"
+                alt="Sumayea Rahman"
+                width={320}
+                height={320}
+                className="rounded-full object-cover border-4 border-purple-500/30 shadow-2xl"
+                priority
+              />
             </div>
           </div>
         </div>
