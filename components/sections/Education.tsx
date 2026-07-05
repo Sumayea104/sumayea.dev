@@ -3,23 +3,23 @@ import { GraduationCap, Calendar, MapPin, Award } from "lucide-react"
 const educationData = [
   {
     degree: "MBA in Finance",
-    institution: "Leading University, Sylhet",
-    location: "Sylhet, Bangladesh",
-    period: "2022 - 2024",
-    description: "Specialized in Financial Management, Investment Analysis, and Corporate Finance. CGPA: 3.72/4.00",
+    institution: "Jagannath University, Dhaka",
+    location: "Dhaka, Bangladesh",
+    period: "2019 - 2020",
+    description: "Specialized in Financial Management, Investment Analysis, and Corporate Finance.",
   },
   {
     degree: "Bachelor of Business Administration",
-    institution: "Leading University, Sylhet",
-    location: "Sylhet, Bangladesh",
-    period: "2018 - 2022",
-    description: "Major in Finance with minor in Marketing. CGPA: 3.65/4.00",
+    institution: "Jagannath University, Dhaka",
+    location: "Dhaka, Bangladesh",
+    period: "2014-2018",
+    description: "Major in Finance and Banking, with coursework in Accounting, Economics, and Business Strategy.",
   },
   {
     degree: "AI-Driven Software Engineering Bootcamp",
-    institution: "Ostad",
+    institution: "Programming Hero",
     location: "Online",
-    period: "2025 - 2026",
+    period: "2026 April - 2026 September",
     description: "Full-stack development with AI integration, including LangChain, RAG, and multi-agent systems.",
   },
 ]
