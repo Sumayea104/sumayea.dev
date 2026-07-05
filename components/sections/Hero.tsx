@@ -27,7 +27,7 @@ export function Hero() {
 
             {/* ✅ Name */}
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
-              Hi, I'm{" "}
+              Hi, I&apos;m{" "}
               <span className="bg-gradient-to-r from-purple-600 via-purple-500 to-pink-600 bg-clip-text text-transparent">
                 Sumayea Rahman
               </span>
