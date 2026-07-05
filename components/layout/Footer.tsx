@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { Heart, Github, Linkedin, Twitter, Mail, ArrowUp } from "lucide-react"
 
 export function Footer() {
   const scrollToTop = () => {
@@ -20,10 +21,18 @@ export function Footer() {
               Full Stack Developer • MBA (Finance) • AI Enthusiast
             </p>
             <div className="flex gap-3 mt-4">
-              <a href="https://github.com/Sumayea104" target="_blank" className="text-gray-400 hover:text-purple-600 transition text-xl">🐙</a>
-              <a href="https://www.linkedin.com/in/sumayea-rahman" target="_blank" className="text-gray-400 hover:text-purple-600 transition text-xl">🔗</a>
-              <a href="https://x.com/RahmanSuma22098" target="_blank" className="text-gray-400 hover:text-purple-600 transition text-xl">🐦</a>
-              <a href="mailto:sumayearahman7@gmail.com" className="text-gray-400 hover:text-purple-600 transition text-xl">✉️</a>
+              <a href="https://github.com/Sumayea104" target="_blank" className="text-gray-400 hover:text-purple-600 transition">
+                <Github size={18} />
+              </a>
+              <a href="https://www.linkedin.com/in/sumayea-rahman" target="_blank" className="text-gray-400 hover:text-purple-600 transition">
+                <Linkedin size={18} />
+              </a>
+              <a href="https://x.com/RahmanSuma22098" target="_blank" className="text-gray-400 hover:text-purple-600 transition">
+                <Twitter size={18} />
+              </a>
+              <a href="mailto:sumayearahman7@gmail.com" className="text-gray-400 hover:text-purple-600 transition">
+                <Mail size={18} />
+              </a>
             </div>
           </div>
 
@@ -48,16 +57,22 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Let&apos;s Connect</h4>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Have a project? Let&apos;s build something amazing together.</p>
-            <Link href="/#contact" className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:scale-105 transition shadow-lg shadow-purple-500/30 text-sm font-medium">Get in Touch</Link>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Let's Connect</h4>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Have a project? Let's build something amazing together.</p>
+            <Link href="/#contact" className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:scale-105 transition shadow-lg shadow-purple-500/30 text-sm font-medium">
+              Get in Touch
+            </Link>
           </div>
         </div>
 
         <div className="mt-10 pt-6 border-t border-gray-200/50 dark:border-gray-800/50 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-1">Made with ❤️ by Sumayea Rahman</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-1">
+            Made with <Heart size={14} className="text-red-500" /> by Sumayea Rahman
+          </p>
           <p className="text-sm text-gray-500 dark:text-gray-400">© {new Date().getFullYear()} All rights reserved.</p>
-          <button onClick={scrollToTop} className="p-2 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-full hover:scale-110 transition text-purple-600">⬆</button>
+          <button onClick={scrollToTop} className="p-2 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-full hover:scale-110 transition text-purple-600">
+            <ArrowUp size={18} />
+          </button>
         </div>
       </div>
     </footer>

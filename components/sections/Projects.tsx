@@ -3,8 +3,8 @@ import { projects, projectImages } from "@/db/schema"
 import { eq } from "drizzle-orm"
 import Link from "next/link"
 import Image from "next/image"
+import { Github, ExternalLink } from "lucide-react"  // ✅ Only these two
 
-// Status color mapping
 const getStatusColor = (status: string) => {
   switch (status) {
     case "COMPLETED":
@@ -21,7 +21,6 @@ const getStatusColor = (status: string) => {
 export async function Projects() {
   const allProjects = await db.select().from(projects)
 
-  // Fetch images for each project
   const projectsWithImages = await Promise.all(
     allProjects.map(async (project) => {
       const images = await db
@@ -36,7 +35,6 @@ export async function Projects() {
   return (
     <section id="projects" className="py-16 md:py-20 lg:py-24">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 lg:mb-20">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
@@ -48,14 +46,12 @@ export async function Projects() {
           </p>
         </div>
 
-        {/* Projects Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {projectsWithImages.map((project) => (
             <div
               key={project.id}
               className="group bg-white dark:bg-gray-900/80 rounded-xl md:rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 hover:border-purple-200 dark:hover:border-purple-800/50 hover:-translate-y-1"
             >
-              {/* Image Container */}
               <div className="relative w-full aspect-[16/10] bg-gradient-to-br from-purple-100/50 to-pink-100/50 dark:from-purple-900/20 dark:to-pink-900/20 overflow-hidden">
                 {project.images[0] ? (
                   <Image
@@ -70,14 +66,12 @@ export async function Projects() {
                   </div>
                 )}
                 
-                {/* Status Badge */}
                 {project.status && (
                   <span className={`absolute top-3 md:top-4 right-3 md:right-4 px-2.5 md:px-3 py-1 text-xs font-medium rounded-full ${getStatusColor(project.status)}`}>
                     {project.status.replace("_", " ")}
                   </span>
                 )}
 
-                {/* Hover Overlay - Desktop Only */}
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:flex items-center justify-center gap-3">
                   {project.liveUrl && project.liveUrl !== "#" && (
                     <a
@@ -87,7 +81,7 @@ export async function Projects() {
                       className="p-2.5 bg-white rounded-full hover:scale-110 transition"
                       aria-label="Live demo"
                     >
-                      <span className="text-gray-800 text-lg">🔗</span>
+                      <ExternalLink size={18} className="text-gray-800" />
                     </a>
                   )}
                   {project.githubUrl && (
@@ -98,13 +92,12 @@ export async function Projects() {
                       className="p-2.5 bg-white rounded-full hover:scale-110 transition"
                       aria-label="GitHub repository"
                     >
-                      <span className="text-gray-800 text-lg">🐙</span>
+                      <Github size={18} className="text-gray-800" />
                     </a>
                   )}
                 </div>
               </div>
 
-              {/* Content */}
               <div className="p-4 md:p-5 lg:p-6">
                 <h3 className="text-base md:text-lg lg:text-xl font-semibold text-gray-900 dark:text-white mb-1.5 line-clamp-1">
                   {project.title}
@@ -113,7 +106,6 @@ export async function Projects() {
                   {project.description}
                 </p>
 
-                {/* Tech Stack */}
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {project.techStack.slice(0, 4).map((tech) => (
                     <span
@@ -130,7 +122,6 @@ export async function Projects() {
                   )}
                 </div>
 
-                {/* Action Buttons */}
                 <div className="flex items-center gap-2">
                   <Link
                     href={`/projects/${project.slug}`}
@@ -139,7 +130,6 @@ export async function Projects() {
                     View Details
                   </Link>
                   
-                  {/* Mobile Only Icons */}
                   <div className="flex gap-1.5 md:hidden">
                     {project.githubUrl && (
                       <a
@@ -149,7 +139,7 @@ export async function Projects() {
                         className="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/30 transition"
                         aria-label="GitHub"
                       >
-                        <span className="text-gray-700 dark:text-gray-300">🐙</span>
+                        <Github size={16} className="text-gray-700 dark:text-gray-300" />
                       </a>
                     )}
                   </div>
@@ -159,7 +149,6 @@ export async function Projects() {
           ))}
         </div>
 
-        {/* View All Button */}
         <div className="text-center mt-10 md:mt-12 lg:mt-16">
           <Link
             href="/projects"
