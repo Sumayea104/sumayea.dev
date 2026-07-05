@@ -1,7 +1,7 @@
 import { db } from "@/db"
 import { portfolioSettings } from "@/db/schema"
 import Image from "next/image"
-import { Github, Linkedin, Twitter, Mail, Download, Sparkles } from "lucide-react"
+import { Github, Linkedin, X, Mail, Download, Sparkles } from "lucide-react"
 
 export async function Hero() {
   const settings = await db.select().from(portfolioSettings)
@@ -29,7 +29,7 @@ export async function Hero() {
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
-              Hi, I'm{" "}
+              Hi, I&apos;m{" "}
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 {data?.heroTitle || "Sumayea Rahman"}
               </span>
@@ -87,9 +87,9 @@ export async function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110"
-                aria-label="Twitter"
+                aria-label="X"
               >
-                <Twitter size={20} />
+                <X size={20} />
               </a>
               <a
                 href={`mailto:${data?.email || "sumayearahman7@gmail.com"}`}

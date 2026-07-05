@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, MessageCircle } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageCircle, Twitter } from "lucide-react"
 
 export function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" })
@@ -46,7 +46,7 @@ export function Contact() {
             </span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? Let's connect!
+            Have a project in mind or want to collaborate? Let&#39;s connect!
           </p>
         </div>
 
@@ -54,7 +54,7 @@ export function Contact() {
           {/* Left Side - Contact Info */}
           <div className="space-y-8">
             <div className="bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg">
-              <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
+              <h3 className="text-2xl font-semibold mb-6">Let&apos;s Connect</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4 group">

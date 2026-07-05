@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Heart, Github, Linkedin, Twitter, Mail, ArrowUp } from "lucide-react"
+import { Heart, GitHub, Linkedin, Mail, ArrowUp, X as Twitter } from "lucide-react"
 
 export function Footer() {
   const scrollToTop = () => {
@@ -33,7 +33,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition"
               >
-                <Github size={18} />
+                <GitHub size={18} />
               </a>
               <a
                 href="https://www.linkedin.com/in/sumayea-rahman"
@@ -116,9 +116,9 @@ export function Footer() {
 
           {/* CTA */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Let's Connect</h4>
+            <h4 className="font-semibold text-foreground mb-4">Let&apos;s Connect</h4>
             <p className="text-sm text-muted-foreground mb-4">
-              Have a project? Let's build something amazing together.
+              Have a project? Let&apos;s build something amazing together.
             </p>
             <Link
               href="/#contact"
