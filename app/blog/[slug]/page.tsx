@@ -3,6 +3,9 @@ import Link from "next/link"
 import Image from "next/image"
 import { Calendar, Clock, ArrowLeft, ExternalLink } from "lucide-react"
 
+// ✅ Next.js 15 - Correct params type
+type Params = Promise<{ slug: string }>
+
 async function getDevToPost(slug: string) {
   try {
     const res = await fetch(
@@ -21,14 +24,9 @@ async function getDevToPost(slug: string) {
   }
 }
 
-// ✅ FIX: params is a Promise
-export default async function BlogDetailPage({ 
-  params 
-}: { 
-  params: Promise<{ slug: string }> 
-}) {
-  // ✅ FIX: Await params
-  const { slug } = await params
+export default async function BlogDetailPage(props: { params: Params }) {
+  // ✅ Await params
+  const { slug } = await props.params
   
   const post = await getDevToPost(slug)
 
@@ -39,7 +37,6 @@ export default async function BlogDetailPage({
   return (
     <main className="min-h-screen pt-24 pb-16 bg-gradient-to-br from-gray-50/50 via-white to-purple-50/30 dark:from-gray-950/50 dark:via-gray-950 dark:to-purple-950/20">
       <div className="container mx-auto px-4 max-w-3xl">
-        {/* Back to Blog Button */}
         <Link
           href="/blog"
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition mb-6 group"
@@ -48,7 +45,6 @@ export default async function BlogDetailPage({
           Back to Blog
         </Link>
 
-        {/* Article */}
         <article>
           {/* Hero Image */}
           <div className="relative w-full aspect-[2.35/1] rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-purple-100/30 to-pink-100/30 dark:from-purple-900/20 dark:to-pink-900/20 shadow-xl shadow-purple-500/10 dark:shadow-purple-500/5">
