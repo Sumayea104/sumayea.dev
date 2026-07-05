@@ -21,8 +21,16 @@ async function getDevToPost(slug: string) {
   }
 }
 
-export default async function BlogDetailPage({ params }: { params: { slug: string } }) {
-  const post = await getDevToPost(params.slug)
+// ✅ FIX: params is a Promise
+export default async function BlogDetailPage({ 
+  params 
+}: { 
+  params: Promise<{ slug: string }> 
+}) {
+  // ✅ FIX: Await params
+  const { slug } = await params
+  
+  const post = await getDevToPost(slug)
 
   if (!post) {
     notFound()
@@ -31,7 +39,7 @@ export default async function BlogDetailPage({ params }: { params: { slug: strin
   return (
     <main className="min-h-screen pt-24 pb-16 bg-gradient-to-br from-gray-50/50 via-white to-purple-50/30 dark:from-gray-950/50 dark:via-gray-950 dark:to-purple-950/20">
       <div className="container mx-auto px-4 max-w-3xl">
-        {/* ✅ Back to Blog Button */}
+        {/* Back to Blog Button */}
         <Link
           href="/blog"
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-purple-600 dark:hover:text-purple-400 transition mb-6 group"

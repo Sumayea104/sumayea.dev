@@ -39,26 +39,24 @@ const statusConfig = {
   }
 }
 
-// ✅ FIX: Make the component async and await params
+// ✅ FIX: params is a Promise
 export default async function ProjectDetailPage({ 
   params 
 }: { 
-  params: Promise<{ slug: string }>  // ← params is now a Promise
+  params: Promise<{ slug: string }> 
 }) {
-  // ✅ FIX: Await params before accessing properties
+  // ✅ FIX: Await params
   const { slug } = await params
 
-  // Fetch project by slug
   const [project] = await db
     .select()
     .from(projects)
-    .where(eq(projects.slug, slug))  // ← use slug variable
+    .where(eq(projects.slug, slug))
 
   if (!project) {
     notFound()
   }
 
-  // Fetch project images
   const images = await db
     .select()
     .from(projectImages)
@@ -92,13 +90,11 @@ export default async function ProjectDetailPage({
           </h1>
           
           <div className="flex flex-wrap items-center gap-3">
-            {/* Status Badge */}
             <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-full ${statusConfig[status]?.color || "bg-gray-100"}`}>
               <StatusIcon size={16} />
               {statusConfig[status]?.label || "Unknown"}
             </span>
 
-            {/* Tech Stack Tags */}
             {project.techStack.slice(0, 5).map((tech) => (
               <span
                 key={tech}
@@ -134,9 +130,7 @@ export default async function ProjectDetailPage({
 
         {/* Content Grid */}
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
-            {/* Description */}
             <section>
               <h2 className="text-xl font-semibold mb-4 flex items-center gap-3">
                 <span className="w-1.5 h-7 bg-gradient-to-b from-purple-600 to-pink-600 rounded-full" />
@@ -151,14 +145,11 @@ export default async function ProjectDetailPage({
               </div>
             </section>
 
-            {/* Challenges */}
             {project.challenges && (
               <section>
                 <h2 className="text-xl font-semibold mb-4 flex items-center gap-3">
                   <span className="w-1.5 h-7 bg-gradient-to-b from-amber-500 to-orange-500 rounded-full" />
-                  <span className="text-amber-700 dark:text-amber-400">
-                    Challenges Faced
-                  </span>
+                  <span className="text-amber-700 dark:text-amber-400">Challenges Faced</span>
                 </h2>
                 <div className="bg-amber-50/50 dark:bg-amber-900/10 p-6 rounded-xl border border-amber-200 dark:border-amber-800/30 shadow-sm">
                   <p className="text-amber-800 dark:text-amber-300 leading-relaxed text-sm">
@@ -168,14 +159,11 @@ export default async function ProjectDetailPage({
               </section>
             )}
 
-            {/* Future Improvements */}
             {project.improvements && (
               <section>
                 <h2 className="text-xl font-semibold mb-4 flex items-center gap-3">
                   <span className="w-1.5 h-7 bg-gradient-to-b from-emerald-500 to-teal-500 rounded-full" />
-                  <span className="text-emerald-700 dark:text-emerald-400">
-                    Future Improvements
-                  </span>
+                  <span className="text-emerald-700 dark:text-emerald-400">Future Improvements</span>
                 </h2>
                 <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-6 rounded-xl border border-emerald-200 dark:border-emerald-800/30 shadow-sm">
                   <p className="text-emerald-800 dark:text-emerald-300 leading-relaxed text-sm">
@@ -186,9 +174,7 @@ export default async function ProjectDetailPage({
             )}
           </div>
 
-          {/* Sidebar */}
           <div className="space-y-6">
-            {/* Project Info Card */}
             <div className="bg-white dark:bg-gray-900/50 p-6 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
               <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4 flex items-center gap-2">
                 <span className="w-1 h-4 bg-gradient-to-b from-purple-600 to-pink-600 rounded-full" />
@@ -232,7 +218,6 @@ export default async function ProjectDetailPage({
               </div>
             </div>
 
-            {/* Action Buttons */}
             <div className="space-y-3">
               {project.liveUrl && project.liveUrl !== "#" && (
                 <a
