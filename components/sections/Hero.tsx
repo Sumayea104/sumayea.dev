@@ -1,13 +1,12 @@
 import { db } from "@/db"
 import { portfolioSettings } from "@/db/schema"
 import Image from "next/image"
-import { Github, Linkedin, X, Mail, Download, Sparkles } from "lucide-react"
+import { Download, Sparkles, Github, Linkedin, Twitter, Mail } from "lucide-react"
 
 export async function Hero() {
   const settings = await db.select().from(portfolioSettings)
   const data = settings[0]
 
-  // ✅ GitHub Profile Image URL
   const profileImage = "https://github.com/Sumayea104.png"
 
   return (
@@ -29,7 +28,7 @@ export async function Hero() {
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
-              Hi, I&apos;m{" "}
+              Hi, I'm{" "}
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 {data?.heroTitle || "Sumayea Rahman"}
               </span>
@@ -87,9 +86,9 @@ export async function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110"
-                aria-label="X"
+                aria-label="Twitter"
               >
-                <X size={20} />
+                <Twitter size={20} />
               </a>
               <a
                 href={`mailto:${data?.email || "sumayearahman7@gmail.com"}`}
@@ -104,10 +103,7 @@ export async function Hero() {
           {/* Right Side - Profile Image */}
           <div className="flex justify-center">
             <div className="relative">
-              {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-full blur-2xl animate-pulse" />
-              
-              {/* ✅ Auto GitHub Profile Image */}
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
                 <Image
                   src={profileImage}
@@ -117,8 +113,6 @@ export async function Hero() {
                   className="rounded-full object-cover border-4 border-purple-500/30 shadow-2xl"
                   priority
                 />
-                
-                {/* Online Status Ring */}
                 <div className="absolute -bottom-2 -right-2 bg-green-500 rounded-full p-2 border-4 border-white dark:border-gray-900">
                   <div className="w-2 h-2 bg-white rounded-full" />
                 </div>
