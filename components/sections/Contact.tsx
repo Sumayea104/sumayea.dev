@@ -66,10 +66,12 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {/* Left Side - Contact Info */}
-          <div className="space-y-8">
-            <div className="bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg">
+        {/* ✅ grid layers standard parameters align items stretch layout configuration */}
+        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto items-stretch">
+          
+          {/* ✅ Left Side - Added full height box alignment layout parameters framework */}
+          <div className="bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg flex flex-col justify-between h-full">
+            <div>
               <h3 className="text-2xl font-semibold mb-6">Let&apos;s Connect</h3>
               
               <div className="space-y-6">
@@ -113,112 +115,116 @@ export function Contact() {
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Connect with me</p>
-                <div className="flex gap-3">
-                  <a href="https://github.com/Sumayea104" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110">
-                    <Github size={20} />
-                  </a>
-                  <a href="https://www.linkedin.com/in/sumayea-rahman" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110">
-                    <Linkedin size={20} />
-                  </a>
-                  <a href="https://x.com/RahmanSuma22098" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110">
-                    <Twitter size={20} />
-                  </a>
-                  <a href="mailto:sumayearahman7@gmail.com" className="p-3 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110">
-                    <Mail size={20} />
-                  </a>
-                </div>
+            {/* Bottom Section stays pinned at bottom edge */}
+            <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Connect with me</p>
+              <div className="flex gap-3">
+                <a href="https://github.com/Sumayea104" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110">
+                  <Github size={20} />
+                </a>
+                <a href="https://www.linkedin.com/in/sumayea-rahman" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110">
+                  <Linkedin size={20} />
+                </a>
+                <a href="https://x.com/RahmanSuma22098" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110">
+                  <Twitter size={20} />
+                </a>
+                <a href="mailto:sumayearahman7@gmail.com" className="p-3 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110">
+                  <Mail size={20} />
+                </a>
               </div>
             </div>
           </div>
 
-          {/* Right Side - Contact Form */}
-          <div className="bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg">
-            <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  Your Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="John Doe"
-                  className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-purple-600 outline-none transition"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  required
+          {/* ✅ Right Side - Contact Form (Ensured balanced equal h-full layer scaling) */}
+          <div className="bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg flex flex-col justify-between h-full">
+            <div>
+              <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
+              
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    Your Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="John Doe"
+                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-purple-600 outline-none transition"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
+                    disabled={status === "loading"}
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    Your Email <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="john@example.com"
+                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-purple-600 outline-none transition"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    required
+                    disabled={status === "loading"}
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    Subject <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Project Inquiry"
+                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-purple-600 outline-none transition"
+                    value={formData.subject}
+                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                    required
+                    disabled={status === "loading"}
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    Message <span className="text-red-500">*</span>
+                  </label>
+                  <textarea
+                    placeholder="Tell me about your project..."
+                    rows={5}
+                    className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-purple-600 outline-none transition resize-none"
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    required
+                    disabled={status === "loading"}
+                  />
+                </div>
+
+                <button
+                  type="submit"
                   disabled={status === "loading"}
-                />
-              </div>
+                  className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:scale-[1.02] transition shadow-lg shadow-purple-500/30 flex items-center justify-center gap-2 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  <Send size={18} />
+                  {status === "loading" ? "Sending..." : "Send Message"}
+                </button>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  Your Email <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  placeholder="john@example.com"
-                  className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-purple-600 outline-none transition"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  required
-                  disabled={status === "loading"}
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  Subject <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Project Inquiry"
-                  className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-purple-600 outline-none transition"
-                  value={formData.subject}
-                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  required
-                  disabled={status === "loading"}
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  Message <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  placeholder="Tell me about your project..."
-                  rows={5}
-                  className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-purple-600 outline-none transition resize-none"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  required
-                  disabled={status === "loading"}
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={status === "loading"}
-                className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:scale-[1.02] transition shadow-lg shadow-purple-500/30 flex items-center justify-center gap-2 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                <Send size={18} />
-                {status === "loading" ? "Sending..." : "Send Message"}
-              </button>
-
-              {statusMessage && (
-                <p className={`text-center text-sm ${
-                  status === "success" ? "text-green-600" : 
-                  status === "error" ? "text-red-600" : 
-                  "text-gray-600"
-                }`}>
-                  {statusMessage}
-                </p>
-              )}
-            </form>
+                {statusMessage && (
+                  <p className={`text-center text-sm ${
+                    status === "success" ? "text-green-600" : 
+                    status === "error" ? "text-red-600" : 
+                    "text-gray-600"
+                  }`}>
+                    {statusMessage}
+                  </p>
+                )}
+              </form>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
