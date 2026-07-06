@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
 
-// This would come from database in production
+// Updated blog posts array (June 28 post removed)
 const blogPosts = [
   {
     id: 1,
@@ -11,15 +11,6 @@ const blogPosts = [
     readTime: "8 min read",
     category: "AI",
     slug: "multi-agent-fintech-langgraph",
-  },
-  {
-    id: 2,
-    title: "From Finance to Tech: My Journey as an MBA in Software Engineering",
-    excerpt: "How my finance background gave me a unique edge in software development and AI integration.",
-    date: "June 28, 2026",
-    readTime: "6 min read",
-    category: "Career",
-    slug: "finance-to-tech-journey",
   },
   {
     id: 3,
@@ -43,7 +34,8 @@ export function Blog() {
           Sharing my learnings, insights, and experiences in tech and finance
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* ✅ Fixed Grid: Mobile-e 1 ta thakbe, Tab (md) ebong PC (lg) dutotei pashapashi 2 ta thakbe perfectly */}
+        <div className="grid grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto gap-6">
           {blogPosts.map((post) => (
             <Link
               key={post.id}
