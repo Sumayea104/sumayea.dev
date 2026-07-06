@@ -38,25 +38,10 @@ This portfolio is designed to be:
     - [Frontend](#frontend)
     - [Backend](#backend)
     - [Deployment](#deployment)
-  - [📁 Project Structure](#-project-structure)
-  - [└── package.json           # Dependencies and scripts](#-packagejson------------dependencies-and-scripts)
-  - [Installation](#installation)
-- [1. Clone the repository](#1-clone-the-repository)
-  - [Environment Variables](#environment-variables)
-- [Database](#database)
-- [Authentication](#authentication)
-- [Email (Resend)](#email-resend)
-- [Optional: Gmail SMTP (if not using Resend)](#optional-gmail-smtp-if-not-using-resend)
-  - [🚀 Deployment](#-deployment)
-  - [Live URL: https://sumayea-dev.vercel.app](#live-url-httpssumayea-devvercelapp)
-  - [🔐 Admin Dashboard](#-admin-dashboard)
-    - [Login Credentials](#login-credentials)
     - [Admin Features](#admin-features)
   - [🌐 Live Demo](#-live-demo)
   - [📊 Database Schema](#-database-schema)
     - [Tables](#tables)
-  - [🤝 Contributing](#-contributing)
-  - [📝 License](#-license)
   - [🙏 Acknowledgments](#-acknowledgments)
   - [📬 Contact](#-contact)
 
@@ -118,7 +103,7 @@ This portfolio is designed to be:
 | GitHub | Version control |
 
 ---
-
+```
 ## 📁 Project Structure
 sumayea.dev/
 ├── app/
@@ -139,72 +124,8 @@ sumayea.dev/
 ├── .env.local             # Environment variables
 ├── next.config.ts         # Next.js configuration
 └── package.json           # Dependencies and scripts
----
-
-
-## Installation
-# 1. Clone the repository
-```
-git clone https://github.com/Sumayea104/sumayea.dev.git
-cd sumayea.dev
-
-# 2. Install dependencies
-npm install --legacy-peer-deps
-
-# 3. Create environment file
-cp .env.example .env.local
-
-# 4. Set up database
-npx drizzle-kit generate
-npx drizzle-kit migrate
-
-# 5. Seed the database
-node --env-file=.env.local --import tsx scripts/seed.ts
-
-# 6. Start development server
-npm run dev
 ```
 ---
-## Environment Variables
-- Create a .env.local file:
-# Database
-DATABASE_URL="postgresql://username:password@ep-xyz.neon.tech/db?sslmode=require"
-
-# Authentication
-NEXTAUTH_SECRET="your-32-character-secret"
-NEXTAUTH_URL="http://localhost:3000"
-
-# Email (Resend)
-RESEND_API_KEY="re_xxxxxxxxxxxx"
-
-# Optional: Gmail SMTP (if not using Resend)
-SMTP_HOST="smtp.gmail.com"
-SMTP_PORT="587"
-SMTP_USER="your-email@gmail.com"
-SMTP_PASSWORD="your-app-password"
-
----
-## 🚀 Deployment
-- Deploy to Vercel
-```
-# 1. Push to GitHub
-git add .
-git commit -m "Deploy to production"
-git push origin main
-
-# 2. Connect repository to Vercel
-# 3. Add environment variables in Vercel dashboard
-# 4. Deploy
-```
----
-## Live URL: https://sumayea-dev.vercel.app
-
----
-## 🔐 Admin Dashboard
-
-### Login Credentials
-* **Email:** sumayearahman7@gmail.com
-* **Password:** `admin123`
 
 ### Admin Features
 * ✅ Manage projects (add, edit, delete)
@@ -233,21 +154,6 @@ git push origin main
 | **blog_posts** | Blog posts (coming soon) |
 | **portfolio_settings** | Dynamic portfolio info |
 
----
-
-## 🤝 Contributing
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
-
-## 📝 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -272,6 +178,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <div align="center">
-  <p>Built with ❤️ and ☕ in Dhaka, Bangladesh</p>
+  <p>Built with ❤️ and ☕</p>
   <i>"Code is poetry, and your portfolio is its anthology"</i>
 </div>
