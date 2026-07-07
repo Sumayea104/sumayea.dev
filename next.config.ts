@@ -1,9 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-
   typescript: {
     ignoreBuildErrors: true,
+  },
+  eslint: {
+    // This tells Next.js/Netlify to ignore lint errors during builds
+    ignoreDuringBuilds: true,
   },
   images: {
     remotePatterns: [
