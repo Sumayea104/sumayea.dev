@@ -54,7 +54,7 @@ export async function Skills() {
               💻 Technical Ecosystem
             </span>
           </h2>
-          <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
+          <p >
             Technologies I work with to build modern applications
           </p>
         </div>
@@ -85,7 +85,7 @@ export async function Skills() {
                   {items.map((skill) => (
                     <span
                       key={skill.id}
-                      className="px-3 py-1.5 bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-400 text-xs md:text-sm font-medium rounded-full border border-purple-200 dark:border-purple-800/30 hover:bg-purple-100 dark:hover:bg-purple-900/40 transition-colors duration-200"
+                      className="px-3 py-1.5 bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-200 text-xs md:text-sm font-medium rounded-full border border-purple-200 dark:border-purple-800/30 hover:bg-purple-100 dark:hover:bg-purple-900/40 transition-colors duration-200"
                     >
                       {skill.name}
                     </span>
@@ -98,7 +98,7 @@ export async function Skills() {
 
         {/* Total Skills Count */}
         <div className="text-center mt-8 text-sm text-muted-foreground">
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-900/50 rounded-full border border-gray-200 dark:border-gray-800">
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-500/50 rounded-full border border-gray-200 dark:border-gray-400">
             🚀 {allSkills.length} technologies • {Object.keys(grouped).length} categories
           </span>
         </div>

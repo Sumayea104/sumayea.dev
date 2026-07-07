@@ -6,32 +6,32 @@
 @layer base {
   /* ===== LIGHT THEME ===== */
   :root {
-    --background: 255 255 255;
-    --foreground: 10 10 10;  /* ✅ Pure black for main text */
+    --background: 248 250 252;  /* ✅ Soft light gray background */
+    --foreground: 15 23 42;     /* ✅ Dark slate for main text */
     
-    --card: 255 255 255;
-    --card-foreground: 10 10 10;
+    --card: 255 255 255;        /* ✅ Pure white card */
+    --card-foreground: 15 23 42;
     
     --popover: 255 255 255;
-    --popover-foreground: 10 10 10;
+    --popover-foreground: 15 23 42;
     
-    --primary: 139 92 246;
+    --primary: 139 92 246;      /* ✅ Purple */
     --primary-foreground: 255 255 255;
     
-    --secondary: 244 244 245;
-    --secondary-foreground: 10 10 10;  /* ✅ Black text on light bg */
+    --secondary: 226 232 240;   /* ✅ Light gray */
+    --secondary-foreground: 15 23 42;
     
-    --muted: 244 244 245;
-    --muted-foreground: 50 50 55;  /* ✅ Darker gray for readability */
+    --muted: 241 245 249;
+    --muted-foreground: 71 85 105;  /* ✅ Darker gray for readability */
     
-    --accent: 244 244 245;
-    --accent-foreground: 10 10 10;
+    --accent: 241 245 249;
+    --accent-foreground: 15 23 42;
     
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
     
-    --border: 228 228 231;
-    --input: 228 228 231;
+    --border: 203 213 225;
+    --input: 203 213 225;
     --ring: 139 92 246;
     
     --radius: 0.5rem;
@@ -40,25 +40,25 @@
   /* ===== DARK THEME ===== */
   .dark {
     --background: 10 10 10;
-    --foreground: 255 255 255;
+    --foreground: 241 245 249;
     
-    --card: 10 10 10;
-    --card-foreground: 255 255 255;
+    --card: 20 20 25;
+    --card-foreground: 241 245 249;
     
-    --popover: 10 10 10;
-    --popover-foreground: 255 255 255;
+    --popover: 20 20 25;
+    --popover-foreground: 241 245 249;
     
     --primary: 139 92 246;
     --primary-foreground: 255 255 255;
     
     --secondary: 39 39 42;
-    --secondary-foreground: 255 255 255;
+    --secondary-foreground: 241 245 249;
     
     --muted: 39 39 42;
     --muted-foreground: 161 161 170;
     
     --accent: 39 39 42;
-    --accent-foreground: 255 255 255;
+    --accent-foreground: 241 245 249;
     
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
@@ -79,74 +79,39 @@
   }
 }
 
-/* ===== UTILITIES ===== */
+/* ===== TEXT COLORS - FORCED FOR READABILITY ===== */
 @layer utilities {
-  .animate-bounce-slow {
-    animation: bounce 3s infinite;
-  }
-
-  .glass {
-    @apply bg-white/10 backdrop-blur-md border border-white/20;
-  }
-
-  .dark .glass {
-    @apply bg-gray-900/50 backdrop-blur-md border border-gray-700/30;
-  }
-
-  .gradient-text {
-    @apply bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent;
-  }
-
-  .bg-gradient-primary {
-    @apply bg-gradient-to-r from-purple-600 to-pink-600;
-  }
-
-  .border-border {
-    border-color: rgb(var(--border));
-  }
-  
-  .bg-background {
-    background-color: rgb(var(--background));
-  }
-  
+  /* ✅ Light mode text fixes */
   .text-foreground {
     color: rgb(var(--foreground));
-  }
-  
-  .bg-primary {
-    background-color: rgb(var(--primary));
-  }
-  
-  .bg-primary-foreground {
-    background-color: rgb(var(--primary-foreground));
-  }
-  
-  .text-primary {
-    color: rgb(var(--primary));
-  }
-  
-  .text-primary-foreground {
-    color: rgb(var(--primary-foreground));
-  }
-  
-  .bg-secondary {
-    background-color: rgb(var(--secondary));
-  }
-  
-  .text-secondary {
-    color: rgb(var(--secondary));
   }
   
   .text-muted-foreground {
     color: rgb(var(--muted-foreground));
   }
   
-  .bg-muted {
-    background-color: rgb(var(--muted));
+  .text-primary {
+    color: rgb(var(--primary));
   }
   
-  .border-border {
-    border-color: rgb(var(--border));
+  .bg-background {
+    background-color: rgb(var(--background));
+  }
+  
+  /* ✅ Force dark text in light mode */
+  body.light-mode .text-muted-foreground {
+    color: #475569 !important;
+  }
+  
+  /* ✅ Paragraph contrast */
+  p {
+    color: rgb(var(--foreground));
+    line-height: 1.75;
+  }
+  
+  /* ✅ Muted text in light mode */
+  .light-mode .text-muted-foreground {
+    color: #475569;
   }
 }
 
@@ -155,7 +120,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -176,7 +140,7 @@ html {
   @apply bg-purple-600/30 text-purple-900 dark:text-purple-100;
 }
 
-
+/* ===== ANIMATIONS ===== */
 @keyframes slideIn {
   from {
     transform: translateX(100%);

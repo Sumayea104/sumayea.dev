@@ -41,7 +41,7 @@ export async function Projects() {
               Featured Projects
             </span>
           </h2>
-          <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
+          <p >
             Building business-driven applications with modern technology and AI integration
           </p>
         </div>
@@ -50,7 +50,7 @@ export async function Projects() {
           {projectsWithImages.map((project) => (
             <div
               key={project.id}
-              className="group bg-white dark:bg-gray-900/80 rounded-xl md:rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 hover:border-purple-200 dark:hover:border-purple-800/50 hover:-translate-y-1"
+              className="group rounded-xl md:rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-pink-200 hover:border-purple-800 dark:hover:border-purple-800/50 hover:-translate-y-1"
             >
               <div className="relative w-full aspect-[16/10] bg-gradient-to-br from-purple-100/50 to-pink-100/50 dark:from-purple-900/20 dark:to-pink-900/20 overflow-hidden">
                 {project.images[0] ? (
@@ -99,10 +99,10 @@ export async function Projects() {
               </div>
 
               <div className="p-4 md:p-5 lg:p-6">
-                <h3 className="text-base md:text-lg lg:text-xl font-semibold text-gray-900 dark:text-white mb-1.5 line-clamp-1">
+                <h3 className="text-base md:text-lg lg:text-xl font-semibold  mb-1.5 line-clamp-1">
                   {project.title}
                 </h3>
-                <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
+                <p className="text-xs md:text-sm  dark:text-gray-400 mb-3 line-clamp-2">
                   {project.description}
                 </p>
 
@@ -152,7 +152,7 @@ export async function Projects() {
         <div className="text-center mt-10 md:mt-12 lg:mt-16">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 px-6 md:px-8 py-2.5 md:py-3 border-2 border-purple-600 text-purple-600 dark:text-purple-400 rounded-lg hover:bg-purple-600 hover:text-white dark:hover:text-white transition font-medium text-sm md:text-base"
+            className="inline-flex items-center gap-2 px-6 md:px-8 py-2.5 md:py-3 border-2 border-purple-600 text-purple-700 dark:text-purple-700 rounded-lg hover:bg-purple-600 hover:text-white dark:hover:text-white transition font-medium text-sm md:text-base"
           >
             View All Projects
             <span>→</span>
