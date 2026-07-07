@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Heart, Github, Linkedin, Twitter, Mail, ArrowUp } from "lucide-react"
-
+const contactEmail = "sumayearahman7" + "@" + "gmail.com";
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -30,7 +30,8 @@ export function Footer() {
               <a href="https://x.com/RahmanSuma22098" target="_blank" className="text-gray-400 hover:text-purple-600 transition">
                 <Twitter size={18} />
               </a>
-              <a href="mailto:sumayearahman7@gmail.com" className="text-gray-400 hover:text-purple-600 transition">
+              
+              <a href={`mailto:${contactEmail}`} className="text-gray-400 hover:text-purple-600 transition">
                 <Mail size={18} />
               </a>
             </div>

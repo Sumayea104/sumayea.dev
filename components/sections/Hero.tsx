@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Github, Linkedin, Twitter, Mail, Download, Sparkles } from "lucide-react"
-
+const email = "sumayearahman7" + "@" + "gmail.com";
 export function Hero() {
   return (
     <section className="min-h-screen flex items-center pt-16 relative overflow-hidden">
@@ -92,7 +92,7 @@ export function Hero() {
                 <Twitter size={20} />
               </a>
               <a
-                href="mailto:sumayearahman7@gmail.com"
+                href={`mailto:${email}`}
                 className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20"
                 aria-label="Email"
               >

@@ -33,11 +33,10 @@ export async function POST(req: Request) {
       console.error("❌ Database error:", dbError)
     }
 
-    // ✅ Send email using Resend
-    const { data, error } = await resend.emails.send({
+const { data, error } = await resend.emails.send({
       from: "Portfolio <onboarding@resend.dev>",
-      to: ["sumayearahman7@gmail.com"], // ✅ Receiver = You
-      reply_to: email, // ✅ Sender's email (reply goes here)
+      to: [process.env.SMTP_USER || "sumayearahman7@gmail.com"], // 👈 Updated here
+      reply_to: email, 
       subject: `Portfolio Inquiry: ${subject}`,
       html: `
         <!DOCTYPE html>

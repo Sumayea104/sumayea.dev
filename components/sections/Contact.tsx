@@ -13,6 +13,8 @@ export function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
   const [statusMessage, setStatusMessage] = useState("")
 
+  const displayEmail = process.env.NEXT_PUBLIC_EMAIL || "sumayearahman7@gmail.com"
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus("loading")
@@ -77,7 +79,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
-                    <p className="font-medium">sumayearahman7@gmail.com</p>
+                    <p className="font-medium">{displayEmail}</p>
                   </div>
                 </div>
 
@@ -124,7 +126,7 @@ export function Contact() {
                   <a href="https://x.com/RahmanSuma22098" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110">
                     <Twitter size={20} />
                   </a>
-                  <a href="mailto:sumayearahman7@gmail.com" className="p-3 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110">
+                  <a href={`mailto:${displayEmail}`} className="p-3 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-purple-100 dark:hover:bg-purple-900/30 transition hover:scale-110">
                     <Mail size={20} />
                   </a>
                 </div>
