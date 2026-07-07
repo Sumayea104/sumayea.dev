@@ -136,7 +136,7 @@ sumayea.dev/
 ---
 
 ## 🌐 Live Demo
-* **Visit:** [https://sumayea-dev.vercel.app](https://sumayea-dev.vercel.app)
+* **Visit:** [https://sumayea-dev-portfolio.netlify.app/]
 
 ---
 
@@ -169,7 +169,7 @@ sumayea.dev/
 ---
 
 ## 📬 Contact
-* **Portfolio:** [https://sumayea.dev](https://sumayea.dev)
+* **Portfolio:** [https://sumayea-dev-portfolio.netlify.app/]
 * **Email:** sumayearahman7@gmail.com
 * **GitHub:** [https://github.com/Sumayea104](https://github.com/Sumayea104)
 * **LinkedIn:** [https://linkedin.com/in/sumayea-rahman](https://linkedin.com/in/sumayea-rahman)
