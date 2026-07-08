@@ -2,7 +2,7 @@
 
 > *Crafting digital experiences with precision and purpose*
 
-[![Next.js](https://img.shields.io/badge/Next.js-15.4.5-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-15.2.4-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.4.0-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Drizzle](https://img.shields.io/badge/Drizzle-0.30.0-5C4EE5?style=for-the-badge&logo=drizzle&logoColor=white)](https://orm.drizzle.team/)
@@ -87,7 +87,7 @@ This portfolio is designed to be:
 ### Frontend
 | Technology | Version | Purpose |
 |------------|---------|---------|
-| Next.js | 15.4.5 | React framework with App Router |
+| Next.js | 15.2.4 | React framework with App Router |
 | TypeScript | 5.4.0 | Type-safe JavaScript |
 | Tailwind CSS | 3.4.0 | Utility-first styling |
 | Framer Motion | 11.0.0 | Smooth animations |
@@ -142,7 +142,7 @@ sumayea.dev/
 
 ## 🌐 Live Demo
 * **Visit-Netlify:** [https://sumayea-dev-portfolio.netlify.app/]
-* **Visit-Netlify:** [https://sumayea-dev-b5s2-ayk8b0o8b-sumayea104s-projects.vercel.app/]
+* **Visit-vercel:** [https://sumayea-dev-b5s2-ayk8b0o8b-sumayea104s-projects.vercel.app/]
 
 ---
 
