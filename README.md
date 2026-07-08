@@ -141,7 +141,8 @@ sumayea.dev/
 ---
 
 ## 🌐 Live Demo
-* **Visit:** [https://sumayea-dev-portfolio.netlify.app/]  [https://sumayea-dev-b5s2-ayk8b0o8b-sumayea104s-projects.vercel.app/]
+* **Visit-Netlify:** [https://sumayea-dev-portfolio.netlify.app/]
+* **Visit-Netlify:** [https://sumayea-dev-b5s2-ayk8b0o8b-sumayea104s-projects.vercel.app/]
 
 ---
 
