@@ -87,7 +87,7 @@ This portfolio is designed to be:
 ### Frontend
 | Technology | Version | Purpose |
 |------------|---------|---------|
-| Next.js | 15.4.5 | React framework with App Router |
+| Next.js | 15.2.4 | React framework with App Router |
 | TypeScript | 5.4.0 | Type-safe JavaScript |
 | Tailwind CSS | 3.4.0 | Utility-first styling |
 | Framer Motion | 11.0.0 | Smooth animations |
@@ -142,7 +142,7 @@ sumayea.dev/
 
 ## 🌐 Live Demo
 * **Visit-Netlify:** [https://sumayea-dev-portfolio.netlify.app/]
-* **Visit-Netlify:** [https://sumayea-dev-b5s2-ayk8b0o8b-sumayea104s-projects.vercel.app/]
+* **Visit-Vercel:** [https://sumayea-dev.vercel.app/]
 
 ---
 
@@ -203,6 +203,7 @@ This project was built and deployed using **Next.js 15**, **React 19**, and **Ne
 
 ## 📬 Contact
 * **Portfolio:** [https://sumayea-dev-portfolio.netlify.app/]
+* **Visit-Vercel:** [https://sumayea-dev.vercel.app/]
 * **Email:** sumayearahman7@gmail.com
 * **GitHub:** [https://github.com/Sumayea104](https://github.com/Sumayea104)
 * **LinkedIn:** [https://linkedin.com/in/sumayea-rahman](https://linkedin.com/in/sumayea-rahman)
