@@ -16,6 +16,7 @@
   "dependencies": {
     "@base-ui/react": "^1.6.0",
     "@neondatabase/serverless": "^0.9.0",
+    "@vercel/speed-insights": "^2.0.0",
     "bcryptjs": "^2.4.3",
     "class-variance-authority": "^0.7.1",
     "date-fns": "^4.4.0",
@@ -35,6 +36,7 @@
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
+    "@types/next": "^8.0.7",
     "@types/node": "^20.11.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
