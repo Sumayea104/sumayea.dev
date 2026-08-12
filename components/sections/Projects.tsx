@@ -33,7 +33,7 @@ export async function Projects() {
   )
 
   return (
-    <section id="projects" className="py-16 md:py-20 lg:py-24">
+    <section id="projects" className="px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 lg:mb-20">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">

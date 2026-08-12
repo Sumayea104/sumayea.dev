@@ -2,9 +2,9 @@ import Image from "next/image"
 
 export function About() {
   return (
-    <section id="about" className="py-16 md:py-20 relative overflow-hidden">
+    <section id="about" className="px-6 sm:px-6 lg:px-8 py-16 md:py-20 relative overflow-hidden">
       {/* Premium Gradient Background */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-purple-50/80 via-pink-50/50 to-blue-50/30 dark:from-purple-950/30 dark:via-pink-950/20 dark:to-blue-950/10" />
+      <div className="absolute inset-0 -z-10 " />
       
       <div className="absolute top-0 right-0 w-96 h-96 bg-purple-300/20 dark:bg-purple-500/10 rounded-full blur-3xl" />
 

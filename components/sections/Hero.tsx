@@ -8,7 +8,7 @@ export function Hero() {
     <section className="min-h-screen flex items-center pt-28 lg:pt-36 pb-12 sm:pb-16 lg:pb-24 relative overflow-hidden text-foreground">
       
       {/* 🎯 Premium Gradient Background (Matched with About Section) */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-purple-50/80 via-pink-50/50 to-blue-50/30 dark:from-purple-950/30 dark:via-pink-950/20 dark:to-blue-950/10" />
+      <div className="absolute inset-0 -z-10 " />
 
       {/* Glow Blur Effects */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-purple-300/20 dark:bg-purple-500/10 rounded-full blur-3xl" />
