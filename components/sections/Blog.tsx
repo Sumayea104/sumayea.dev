@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
 
-// Updated blog posts array (June 28 post removed)
 const blogPosts = [
   {
     id: 1,
