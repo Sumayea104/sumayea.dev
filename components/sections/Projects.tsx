@@ -3,7 +3,7 @@ import { projects, projectImages } from "@/db/schema"
 import { eq } from "drizzle-orm"
 import Link from "next/link"
 import Image from "next/image"
-import { Github, ExternalLink } from "lucide-react"  // ✅ Only these two
+import { Github, ExternalLink } from "lucide-react" 
 
 const getStatusColor = (status: string) => {
   switch (status) {

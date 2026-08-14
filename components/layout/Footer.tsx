@@ -27,7 +27,7 @@ export function Footer() {
               <span className="text-gray-800 dark:text-white">.dev</span>
             </Link>
             <p className="mt-3 text-sm text-gray-600 dark:text-gray-400 max-w-xs">
-              Full Stack Developer • MBA (Finance) • AI Enthusiast
+              Full-Stack Software Engineer
             </p>
             <div className="flex gap-3 mt-4">
               <a 
@@ -134,9 +134,6 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-10 pt-6 border-t border-gray-200/60 dark:border-gray-800/60 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-1">
-            Made with <Heart size={14} className="text-red-500" /> by Sumayea Rahman
-          </p>
           <p className="text-sm text-gray-600 dark:text-gray-400">
             © {new Date().getFullYear()} All rights reserved.
           </p>
