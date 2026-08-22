@@ -5,6 +5,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { Github, ExternalLink } from "lucide-react" 
 
+export const revalidate = 0
+
 const getStatusColor = (status: string) => {
   switch (status) {
     case "COMPLETED":
@@ -58,6 +60,7 @@ export async function Projects() {
                     src={project.images[0].imageUrl}
                     alt={project.title}
                     fill
+                    unoptimized
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 ) : (
