@@ -44,7 +44,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto lg:mx-0 mb-8">
               {/* Preview Button */}
               <a 
-                href="/Resume-Sumayea Rahman.pdf"
+                href="/ResumeSumayeaRahman.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 px-5 py-3.5 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-purple-500/25 flex items-center justify-center gap-2 text-sm sm:text-base whitespace-nowrap"
@@ -55,7 +55,7 @@ export function Hero() {
 
               {/* Download Button */}
               <a 
-                href="/Resume-Sumayea Rahman.pdf"
+                href="/ResumeSumayeaRahman.pdf"
                 download="Sumayea_Rahman_Resume.pdf"
                 className="flex-1 px-5 py-3.5 border-2 border-purple-500/40 hover:border-purple-600 bg-purple-50/80 dark:bg-purple-950/40 hover:bg-purple-100 dark:hover:bg-purple-900/50 text-purple-700 dark:text-purple-300 font-semibold rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-md hover:shadow-purple-500/20 flex items-center justify-center gap-2 text-sm sm:text-base whitespace-nowrap group"
               >
