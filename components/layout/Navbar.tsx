@@ -75,8 +75,8 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <Link href="/" className="text-2xl font-bold">
-              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                sumayea
+              <span className="text-gray-800 dark:text-white ">
+                Sumayea
               </span>
               <span className="text-gray-800 dark:text-white">.dev</span>
             </Link>

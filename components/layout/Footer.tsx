@@ -21,11 +21,11 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="text-2xl font-bold">
-              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                sumayea
-              </span>
-              <span className="text-gray-800 dark:text-white">.dev</span>
-            </Link>
+                          <span className="text-gray-800 dark:text-white ">
+                            Sumayea
+                          </span>
+                          <span className="text-gray-800 dark:text-white">.dev</span>
+                        </Link>
             <p className="mt-3 text-sm text-gray-600 dark:text-gray-400 max-w-xs">
               Full-Stack Software Engineer
             </p>
