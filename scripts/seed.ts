@@ -50,6 +50,7 @@ async function seed() {
     // 4. Add Skills (Category enum values match PostgreSQL database)
     console.log("📝 Adding skills...")
     const allSkills = [
+
       // FRONTEND
       { name: "JavaScript", icon: "SiJavascript", category: "FRONTEND" as const, proficiency: 90 },
       { name: "TypeScript", icon: "SiTypescript", category: "FRONTEND" as const, proficiency: 88 },
@@ -64,22 +65,20 @@ async function seed() {
       { name: "daisyUI", icon: "SiDaisyui", category: "FRONTEND" as const, proficiency: 85 },
       { name: "Bootstrap", icon: "SiBootstrap", category: "FRONTEND" as const, proficiency: 80 },
       { name: "Framer Motion", icon: "SiFramer", category: "FRONTEND" as const, proficiency: 82 },
+
       // BACKEND
       { name: "Python", icon: "SiPython", category: "BACKEND" as const, proficiency: 82 },
       { name: "Node.js", icon: "SiNodedotjs", category: "BACKEND" as const, proficiency: 85 },
       { name: "Express.js", icon: "SiExpress", category: "BACKEND" as const, proficiency: 80 },
       { name: "Prisma", icon: "SiPrisma", category: "BACKEND" as const, proficiency: 85 },
-      { name: "Flask", icon: "SiFlask", category: "BACKEND" as const, proficiency: 70 },
+
       // DATABASE
       { name: "PostgreSQL", icon: "SiPostgresql", category: "DATABASE" as const, proficiency: 80 },
       { name: "MongoDB", icon: "SiMongodb", category: "DATABASE" as const, proficiency: 75 },
       { name: "Supabase", icon: "SiSupabase", category: "DATABASE" as const, proficiency: 70 },
       { name: "Neon", icon: "SiNeon", category: "DATABASE" as const, proficiency: 75 },
+
       // DEVOPS
-      { name: "Docker", icon: "SiDocker", category: "DEVOPS" as const, proficiency: 72 },
-      { name: "Nginx", icon: "SiNginx", category: "DEVOPS" as const, proficiency: 65 },
-      { name: "AWS", icon: "SiAmazonaws", category: "DEVOPS" as const, proficiency: 60 },
-      { name: "Linux", icon: "SiLinux", category: "DEVOPS" as const, proficiency: 68 },
       { name: "Vercel", icon: "SiVercel", category: "DEVOPS" as const, proficiency: 92 },
       { name: "Netlify", icon: "SiNetlify", category: "DEVOPS" as const, proficiency: 85 },
       { name: "Render", icon: "SiRender", category: "DEVOPS" as const, proficiency: 80 },
@@ -87,6 +86,7 @@ async function seed() {
       { name: "GitHub", icon: "SiGithub", category: "DEVOPS" as const, proficiency: 90 },
       { name: "VSCode", icon: "SiVisualstudiocode", category: "DEVOPS" as const, proficiency: 95 },
       { name: "Git", icon: "SiGit", category: "DEVOPS" as const, proficiency: 88 },
+
       // AI & ML
       { name: "LangChain", icon: "SiLangchain", category: "AI" as const, proficiency: 60 },
       { name: "LangGraph", icon: "SiLangchain", category: "AI" as const, proficiency: 55 },
@@ -95,8 +95,6 @@ async function seed() {
       { name: "Gemini", icon: "SiGooglebard", category: "AI" as const, proficiency: 55 },
       { name: "pgvector", icon: "SiPostgresql", category: "AI" as const, proficiency: 50 },
       { name: "RAG", icon: "SiRag", category: "AI" as const, proficiency: 50 },
-      { name: "n8n", icon: "SiN8n", category: "AI" as const, proficiency: 45 },
-      { name: "scikit-learn", icon: "SiScikitlearn", category: "AI" as const, proficiency: 55 },
       { name: "TensorFlow", icon: "SiTensorflow", category: "AI" as const, proficiency: 45 },
     ]
 
@@ -129,6 +127,7 @@ async function seed() {
         published: true,
         userId: user.id,
       },
+
       {
         title: "Agentic Finance Beast",
         slug: "agentic-finance-beast",
@@ -147,6 +146,7 @@ async function seed() {
         published: true,
         userId: user.id,
       },
+
       {
         title: "Swiftcart E-commerce",
         slug: "swiftcart-e-commerce",
@@ -201,6 +201,7 @@ async function seed() {
         published: true,
         userId: user.id,
       },
+      
       {
         title: "Customer Support Zone",
         slug: "customer-support-zone",

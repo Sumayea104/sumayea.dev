@@ -50,7 +50,7 @@ export async function Skills() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-gray-100">
               💻 Technical Ecosystem
             </span>
           </h2>
