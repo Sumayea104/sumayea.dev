@@ -8,8 +8,6 @@ import { users, portfolioSettings, skills, projects, projectImages } from "../db
 import { eq } from "drizzle-orm"
 
 async function seed() {
-  console.log("🌱 Starting seed script...")
-
   try {
     // 1. Get or Create Admin User
     let [user] = await db.select().from(users).where(eq(users.email, "sumayearahman7@gmail.com"))
@@ -22,15 +20,12 @@ async function seed() {
       }).returning()
       user = newUser
     }
-    console.log("✅ Admin user ready:", user.id)
-
+  
     // 2. Clear Old Data to Prevent Conflict
-    console.log("🧹 Clearing old projects and images...")
     await db.delete(projectImages)
     await db.delete(projects)
 
     // 3. Portfolio Settings
-    console.log("📝 Checking portfolio settings...")
     const existingSettings = await db.select().from(portfolioSettings).then(res => res[0])
     if (!existingSettings) {
       await db.insert(portfolioSettings).values({
@@ -44,13 +39,10 @@ async function seed() {
         phone: "+880 1403224341",
         location: "Dhaka, Bangladesh",
       })
-      console.log("✅ Portfolio settings created")
     }
 
     // 4. Add Skills (Category enum values match PostgreSQL database)
-    console.log("📝 Adding skills...")
     const allSkills = [
-
       // FRONTEND
       { name: "JavaScript", icon: "SiJavascript", category: "FRONTEND" as const, proficiency: 90 },
       { name: "TypeScript", icon: "SiTypescript", category: "FRONTEND" as const, proficiency: 88 },
@@ -104,10 +96,6 @@ async function seed() {
         await db.insert(skills).values(skill)
       }
     }
-    console.log("✅ Skills processed")
-
-    // 5. Add Projects
-    console.log("📝 Adding projects...")
     const allProjects = [
       {
         title: "FixItNow",
@@ -201,7 +189,7 @@ async function seed() {
         published: true,
         userId: user.id,
       },
-      
+
       {
         title: "Customer Support Zone",
         slug: "customer-support-zone",
@@ -224,8 +212,7 @@ async function seed() {
 
     for (const projectData of allProjects) {
       const [project] = await db.insert(projects).values(projectData).returning()
-      console.log(`   ✅ Inserted: ${project.title}`)
-
+      console.log(`✅ Inserted: ${project.title}`)
       await db.insert(projectImages).values({
         projectId: project.id,
         imageUrl: projectData.thumbnail,
