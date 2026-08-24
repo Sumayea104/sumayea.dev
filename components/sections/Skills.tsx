@@ -45,7 +45,7 @@ export async function Skills() {
     }, {} as Record<string, typeof allSkills>)
 
   return (
-    <section id="skills" className="py-16 md:py-20 bg-gray-50/50 dark:bg-gray-900/30">
+    <section id="skills" className="py-16 md:py-20 ">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">

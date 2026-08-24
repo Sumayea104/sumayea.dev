@@ -52,7 +52,7 @@ export async function Projects() {
           {projectsWithImages.map((project) => (
             <div
               key={project.id}
-              className="group rounded-xl md:rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-pink-200 hover:border-purple-800 dark:hover:border-purple-800/50 hover:-translate-y-1"
+              className="group rounded-xl md:rounded-2xl overflow-hidden bg-white dark:bg-gray-900 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-300 dark:border-gray-700/80 hover:border-purple-600 dark:hover:border-purple-500 hover:-translate-y-1"
             >
               <div className="relative w-full aspect-[16/10] bg-gradient-to-br from-purple-100/50 to-pink-100/50 dark:from-purple-900/20 dark:to-pink-900/20 overflow-hidden">
                 {project.images[0] ? (

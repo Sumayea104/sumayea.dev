@@ -31,7 +31,7 @@ export function Education() {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
           🎓 Education
         </h2>
-        <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-gray-900 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
           My academic journey combining finance, technology, and AI
         </p>
 

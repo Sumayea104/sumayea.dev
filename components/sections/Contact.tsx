@@ -49,10 +49,10 @@ export function Contact() {
   return (
     <section id="contact" className="py-16 md:py-20 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 -z-10">
+      {/* <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-blue-500/10 to-purple-500/10 rounded-full blur-3xl" />
-      </div>
+      </div> */}
 
       <div className="container mx-auto px-4">
         {/* Section Header */}
